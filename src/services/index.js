@@ -2,6 +2,7 @@ import axios from "axios";
 
 
 // nao estou conseguindo fazer a api funcionar
+// nao esquecer de esconder a key da api no .env
 
 export const getWeather = async (name) => {
     const response = await axios.get(
