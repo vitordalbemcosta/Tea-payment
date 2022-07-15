@@ -18,3 +18,9 @@ h1 {
   font-size: 2.5rem;
 }
 
+.app {
+  background-image: url(./assets/images/sunsettwo.jpg);
+  background-size: cover;
+  background-position: bottom;
+  min-height: 100vh;
+}

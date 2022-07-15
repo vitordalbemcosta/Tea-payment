@@ -10,20 +10,25 @@ import WeatherCard from './components/WeatherCard'
 
 //styles
 import * as Styles from './styles'
+import './App.css'
 
 
-const cities = ["Porto Alegre", "Dublin", "São Paulo", "Minneapolis", "Tokyo"]
+const cities = ["Porto Alegre", "London", "Dublin", "São Paulo", "Minneapolis", "Tokyo"];
 
 
 
 function App() {
   const [selectedCity, setSelectedCity] = useState(null);
+  const [weatherData, setWeatherData] = useState(null);
+  const [lat, setLat] = useState(null);
+  const [lon, setLon] = useState(null);
+  
 
-  const handleSelectCity = async (name) => {
-    setSelectedCity(name);
+  const handleSelectCity = async (lat, lon) => {
+    setSelectedCity(lat, lon);
 
     try {
-      const response = await getWeather(name);
+      const response = await getWeather(lat, lon);
       console.log("response", response);
     } catch (error) {
       console.log("error", error);
@@ -31,7 +36,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className='app'>
       <Styles.CityButtonsWrapper>
         {cities.map((city) => (
           <CityButton cityName={city}
@@ -39,13 +44,13 @@ function App() {
             isSelected={selectedCity === city}
             onClick={handleSelectCity}
           />
-        ))};
+        ))}
       </Styles.CityButtonsWrapper>
       <Styles.CityWeatherWrapper>
         <WeatherCard />
         <WeatherCard />
       </Styles.CityWeatherWrapper>
-    </>
+    </div>
   );
 }
 

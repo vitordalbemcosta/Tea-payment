@@ -1,13 +1,12 @@
 import axios from "axios";
 
 
-// nao estou conseguindo fazer a api funcionar
-// nao esquecer de esconder a key da api no .env
-
-export const getWeather = async (name) => {
+export const getWeather = async (lat, lon) => {
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=336ce4dce3a588920b3cea8fb00882d6`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=daily,current&appid=${process.env.REACT_APP_API_KEY}`
     );
 
     return response;
 }
+
+
