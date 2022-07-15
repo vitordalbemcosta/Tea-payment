@@ -1,25 +1,28 @@
 import styled from 'styled-components'
 
 export const Card = styled("div")`
-    border: 1px solid #000;
-    padding: 0 30px;
-    text-align: center;
-    width: 26vw;
-    height: 50vh;
+  border: 0.0625rem solid #000;
+  padding: 0 3.09vh;
+  text-align: center;
+  width: 26vw;
+  height: 47vh;
+  margin: 0.625rem;
+  opacity: 1;
 `;
 
 export const Day = styled("p")`
-  font-size: 18px;
+  font-size: 1.85vh;
   font-weight: 500;
-  padding-top: 50px;
+  padding-top: 4.5vh;
 
 `;
 
 export const Icon = styled("div")`
   background-color: gray;
-  height: 60px;
+  height: 3.75rem;
   width: 100%;
-
+  margin: 10px 0 10px 0;
+  
 `;
 
 export const Degrees = styled("p")`
@@ -28,16 +31,19 @@ export const Degrees = styled("p")`
 
 `;
 
-export const SubInfo = styled("div")`
+export const SubInfo = styled("h6")`
   display: flex;
   justify-content: space-between;
+  margin: 10px 0 10px 0;
 `;
 
-export const Titles = styled("p")`
-  font-size: 0.2vw;
+export const SubData = styled("p")`
   display: flex;
   justify-content: space-between;
+  padding-left: 20px;
+  margin: 10px 0 10px 0;
 `;
+
 
 
 
