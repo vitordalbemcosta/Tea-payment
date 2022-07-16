@@ -3,18 +3,15 @@ import React from 'react'
 import * as Styles from "./styles";
 
 function WeatherCard(props) {
-  const weatherData = [];
-  weatherData.push(props);
-  console.log("card", weatherData[0].apiData)
+  
 
   return (
-    <>
-      { props && weatherData.map((data) => (
-          <>
+    
+
             <Styles.Card>
               <Styles.Day>Monday</Styles.Day>
               <Styles.Icon>Icon</Styles.Icon>
-            <Styles.Degrees> {data[0]} </Styles.Degrees>
+            <Styles.Degrees></Styles.Degrees>
               <Styles.SubInfo>
                 <div>
                   <h6>min</h6>
@@ -36,9 +33,9 @@ function WeatherCard(props) {
                 </div>
               </Styles.SubInfo>
             </Styles.Card>
-          </>
-        ))}
-    </>
+          
+  
+   
   );
 }
 

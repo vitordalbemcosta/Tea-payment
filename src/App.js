@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 
 //API call
@@ -15,64 +15,46 @@ import './App.css'
 
 
 const cities = ["Porto Alegre", "London", "Dublin", "São Paulo", "Minneapolis", "Tokyo"];
+const latitude = [30.03, 51.50, 53.34, 23.55, 44.97, 35.67];
+const longitude = [-51.20, 0.12, 6.26, -46.63, -93.26, 139.65];
 
 function App() {
   const [selectedCity, setSelectedCity] = useState([]);
-  const [lat, setLat] = useState("");
-  const [lon, setLon] = useState("");
+  const [lat, setLat] = useState(0.0);
+  const [lon, setLon] = useState(0.0);
   const [apiData, setApiData] = useState(null)
 
 
 
-  const getWeather = async (lat, lon) => {
+
+
+
+  const getWeatherData = async (lat, lon) => {
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=daily,current&appid=4293699b076587b03d0a2c106adc7a47`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=daily,current&appid=642eb8987cff2f095c8e9b551e968f83`
     );
     setApiData(response.data)
     return apiData;
     
   };
 
-  useEffect(() => {
-    CityLatLon();
-  });
 
-
-  const handleSelectCity = async (cityName) => {
-    setSelectedCity(cityName);
-    console.log(cityName);
-  
+  const handleSelectCity = async (selectedCity) => {
+    const index = cities.indexOf(selectedCity)
+    console.log(selectedCity)
+   
 
     try {
-      const response = await getWeather(lat, lon);
+      setLat(latitude[index]);
+      setLon(longitude[index]);
+      const response = await getWeatherData(lat, lon);
       console.log("response", response);
     } catch (error) {
       console.log("error", error);
     }
   };
 
-   function CityLatLon() {
-    if (selectedCity === "Porto Alegre") {
-      setLat(30.03);
-      setLon(-51.20);
-  } else if (selectedCity === "London") {
-      setLat(51.50);
-      setLon(0.12);
-    } else if (selectedCity === "Dublin") {
-      setLat(53.34);
-      setLon(6.26);
-    } else if (selectedCity === "São Paulo") {
-      setLat(23.55);
-      setLon(-46.63);
-    } else if (selectedCity === "Minneapolis") {
-      setLat(44.97);
-      setLon(-93.26);
-    } else if (selectedCity === "Tokyo") {
-      setLat(35.67);
-      setLon(139.65);
-    }
-  }
-
+  
   return (
     <div className='app'>
       <Styles.CityButtonsWrapper>
