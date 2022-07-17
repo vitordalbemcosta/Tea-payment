@@ -1,12 +1,13 @@
 import * as Styles from './styles';
 
-function CityButton({ cityName, isSelected, onClick }) {
-  const handleClick = () => onClick(cityName); 
-  
+function CityButton({ city, isSelected, onClick }) {
+  function handleClick() {
+    onClick(city);
+  }
 
   return (
     <Styles.Button onClick={handleClick} isSelected={isSelected}>
-      {cityName}
+      {city.name}
     </Styles.Button>
   );
 }
