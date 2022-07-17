@@ -10,16 +10,6 @@ import WeatherCard from "./components/WeatherCard";
 //styles
 import * as Styles from "./styles";
 
-// const cities = [
-//   "Porto Alegre",
-//   "London",
-//   "Dublin",
-//   "São Paulo",
-//   "Minneapolis",
-//   "Tokyo",
-// ];
-// const latitude = [30.03, 51.5, 53.34, 23.55, 44.97, 35.67];
-// const longitude = [-51.2, 0.12, 6.26, -46.63, -93.26, 139.65];
 
 const cities2 = [
   { name: "Porto Alegre", lat: 30.03, lon: -51.2 },
