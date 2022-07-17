@@ -9,6 +9,7 @@ function getDateName(day) {
 }
 
 
+
 function WeatherCard({ isLoading, day }) {
   return (
     <>
@@ -19,8 +20,8 @@ function WeatherCard({ isLoading, day }) {
       ) : (
         <Styles.Card>
           <Styles.Day>{getDateName(day.dt)}</Styles.Day>
-            <Styles.Icon>{day.weather[0].icon}</Styles.Icon>
-            <Styles.Degrees></Styles.Degrees>
+            <Styles.Icon>{day.weather[0].description}</Styles.Icon>
+            <Styles.Degrees>20c</Styles.Degrees>
           <Styles.SubInfo>
             <div>
               <h6>Low</h6>
@@ -34,7 +35,7 @@ function WeatherCard({ isLoading, day }) {
           <Styles.SubInfo>
             <div>
               <h6>Wind Speed</h6>
-                <Styles.SubData>{day.wind_speed}</Styles.SubData>
+                <Styles.SubData>{day.wind_speed}mph</Styles.SubData>
             </div>
             <div>
               <h6>Humidity</h6>

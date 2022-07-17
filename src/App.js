@@ -24,9 +24,11 @@ function App() {
   const [selectedCity, setSelectedCity] = useState(null);
   const [weatherData, setWeatherData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  
 
   async function handleGetWeather() {
     setIsLoading(true);
+  
 
     try {
       const response = await getWeatherData(selectedCity.lat, selectedCity.lon);
@@ -64,7 +66,7 @@ function App() {
         {weatherData?.daily.map((day, index) => (
           <>
             {index <= 5 && (
-              <WeatherCard day={day} key={day.dt} isLoading={isLoading} />
+              <WeatherCard day={day} key={day.dt} isLoading={isLoading}/>
             )}
           </>
         ))}
