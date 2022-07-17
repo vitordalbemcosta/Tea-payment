@@ -1,1 +1,1 @@
-// Weather app for TeaPayment ☕️💵 ☀️
+// Weather app for TeaPayment! ☕️💵
