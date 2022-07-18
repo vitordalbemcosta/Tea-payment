@@ -4,9 +4,9 @@ export const Button = styled("button")`
   border: 1px solid ${({ isSelected }) => (isSelected ? "AE1E27" : "black")};
   background-color: #eb8a90;
   color: ${({ isSelected }) => (isSelected ? "#ffff" : "#000")};
-  margin: 0 15px;
-  padding: 10px 20px;
-  border-radius: 15px;
+  margin: 1.5rem;
+  padding: 1.5rem 2.3rem;
+  border-radius: 50px;
   cursor: pointer;
 
   &:hover {
@@ -14,4 +14,8 @@ export const Button = styled("button")`
     color: white;
     background-color: gray;
   }
+`;
+
+export const Fragment = styled("fragment")`
+  margin-top: 10vh;
 `;

@@ -9,6 +9,7 @@ import WeatherCard from "./components/WeatherCard";
 
 //styles
 import * as Styles from "./styles";
+import "./App.css";
 
 
 const cities2 = [

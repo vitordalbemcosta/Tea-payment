@@ -5,11 +5,12 @@ function CityButton({ city, isSelected, onClick }) {
     onClick(city);
   }
 
-  
   return (
-    <Styles.Button onClick={handleClick} isSelected={isSelected}>
-      {city.name}
-    </Styles.Button>
+    <Styles.Fragment>
+      <Styles.Button onClick={handleClick} isSelected={isSelected}>
+        {city.name}
+      </Styles.Button>
+    </Styles.Fragment>
   );
 }
 

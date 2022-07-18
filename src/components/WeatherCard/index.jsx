@@ -20,24 +20,24 @@ function WeatherCard({ isLoading, day }) {
         <Styles.Card>
           <Styles.Day>{getDateName(day.dt)}</Styles.Day>
           <Styles.Icon>{day.weather[0].description}</Styles.Icon>
-          <Styles.Degrees>{day.temp.min.toFixed()}°C</Styles.Degrees>
+          <Styles.Degrees>{Math.ceil(day.temp.min.toFixed())}°C</Styles.Degrees>
           <Styles.SubInfo>
             <div>
-              <h6>Low</h6>
-              <p>{day.temp.min.toFixed(0)}</p>
+              <Styles.SubInfo>Low</Styles.SubInfo>
+              <Styles.SubData>{day.temp.min.toFixed(0)}℃</Styles.SubData>
             </div>
             <div>
-              <h6>High</h6>
-              <p>{day.temp.max.toFixed(0)}℃</p>
+              <Styles.SubInfo>High</Styles.SubInfo>
+              <Styles.SubData>{day.temp.max.toFixed(0)}℃</Styles.SubData>
             </div>
           </Styles.SubInfo>
           <Styles.SubInfo>
             <div>
-              <h6>Wind Speed</h6>
+              <Styles.SubInfo>Wind Speed</Styles.SubInfo>
               <Styles.SubData>{day.wind_speed.toFixed()}mph</Styles.SubData>
             </div>
             <div>
-              <h6>Humidity</h6>
+              <Styles.SubInfo>Humidity</Styles.SubInfo>
               <Styles.SubData>{day.humidity}%</Styles.SubData>
             </div>
           </Styles.SubInfo>
