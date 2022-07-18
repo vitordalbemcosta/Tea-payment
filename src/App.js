@@ -12,10 +12,10 @@ import * as Styles from "./styles";
 import "./App.css";
 
 const cities2 = [
-  { name: "Porto Alegre", lat: 30.03, lon: -51.2 },
   { name: "London", lat: 51.5, lon: 0.12 },
   { name: "Dublin", lat: 53.34, lon: 6.26 },
-  { name: "São Paulo", lat: 23.55, lon: -46.63 },
+  { name: "São Paulo", lat: 23.55, lon: 46.63 },
+  { name: "Porto Alegre", lat: 30.03, lon: 51.20 },
   { name: "Minneapolis", lat: 44.97, lon: -93.26 },
   { name: "Tokyo", lat: 35.67, lon: 139.65 }
 ];
