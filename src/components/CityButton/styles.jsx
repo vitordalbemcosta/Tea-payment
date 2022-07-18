@@ -2,10 +2,10 @@ import styled from "styled-components"
 
 export const Button = styled("button")`
   border: 1px solid ${({ isSelected }) => (isSelected ? "AE1E27" : "black")};
-  background-color: #eb8a90;
-  color: ${({ isSelected }) => (isSelected ? "#ffff" : "#000")};
-  margin: 1.5rem;
-  padding: 1.5rem 2.3rem;
+  background-color: rgb(129, 103, 151);
+  color: ${({ isSelected }) => (isSelected ? "white" : "black")};
+  margin: .5rem;
+  padding: .8rem 2rem;
   border-radius: 50px;
   cursor: pointer;
 
@@ -17,5 +17,5 @@ export const Button = styled("button")`
 `;
 
 export const Fragment = styled("fragment")`
-  margin-top: 10vh;
+  margin-top: 5vh;
 `;

@@ -1,6 +1,7 @@
 import React from "react";
 
 import * as Styles from "./styles";
+import { LoadingOutlined } from "@ant-design/icons";
 
 function getDateName(day) {
   return new Date(day * 1000).toLocaleDateString("en", {
@@ -14,13 +15,18 @@ function WeatherCard({ isLoading, day }) {
     <>
       {isLoading ? (
         <div>
-          <span>Loading temperature</span>
+          {" "}
+          <LoadingOutlined
+            style={{
+              fontSize: 150,
+            }}
+          />
         </div>
       ) : (
         <Styles.Card>
           <Styles.Day>{getDateName(day.dt)}</Styles.Day>
-          <Styles.Icon>{day.weather[0].description}</Styles.Icon>
           <Styles.Degrees>{Math.ceil(day.temp.min.toFixed())}°C</Styles.Degrees>
+          <Styles.Icon>{day.weather[0].description} icon</Styles.Icon>
           <Styles.SubInfo>
             <div>
               <Styles.SubInfo>Low</Styles.SubInfo>
@@ -34,7 +40,7 @@ function WeatherCard({ isLoading, day }) {
           <Styles.SubInfo>
             <div>
               <Styles.SubInfo>Wind Speed</Styles.SubInfo>
-              <Styles.SubData>{day.wind_speed.toFixed()}mph</Styles.SubData>
+              <Styles.SubData>{day.wind_speed.toFixed()}</Styles.SubData>
             </div>
             <div>
               <Styles.SubInfo>Humidity</Styles.SubInfo>

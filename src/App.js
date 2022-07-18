@@ -11,7 +11,6 @@ import WeatherCard from "./components/WeatherCard";
 import * as Styles from "./styles";
 import "./App.css";
 
-
 const cities2 = [
   { name: "Porto Alegre", lat: 30.03, lon: -51.2 },
   { name: "London", lat: 51.5, lon: 0.12 },
@@ -49,6 +48,7 @@ function App() {
     if (selectedCity) {
       handleGetWeather();
     }
+    // eslint-disable-next-line
   }, [selectedCity]);
 
   return (
