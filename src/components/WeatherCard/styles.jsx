@@ -25,7 +25,7 @@ export const Icon = styled("div")`
   
 `;
 
-export const Degrees = styled("p")`
+export const Degrees = styled("h1")`
   font-size: 3vw;
   font-weight: bold;
 

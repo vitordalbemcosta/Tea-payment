@@ -12,3 +12,4 @@ export const CityWeatherWrapper = styled("div")`
     justify-content: space-around;
     padding: 0 100px;
 `;
+
