@@ -22,6 +22,8 @@ export const Icon = styled("div")`
   width: 100%;
   margin: .8px;
   padding: 1rem;
+  font-weight: 600;
+  font-size: 1vw;
   
 `;
 
@@ -35,7 +37,15 @@ export const SubInfo = styled("h6")`
   font-size: 1.2vw;
   display: flex;
   justify-content: space-around;
-  margin: 15px;
+  margin: 23px 30px;
+  
+`;
+
+export const SubInfoTwo = styled("p")`
+  font-size: 1.2vw;
+  display: flex;
+  justify-content: space-around;
+  margin: 5px 35px;
   
 `;
 
@@ -43,7 +53,7 @@ export const SubData = styled("p")`
   font-size: .9vw;
   display: flex;
   justify-content: space-around;
-  margin: 1.5rem;
+  margin: 18px 35px;
   font-weight: bold;
 `;
 

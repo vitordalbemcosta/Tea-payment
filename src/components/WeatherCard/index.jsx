@@ -40,7 +40,7 @@ function WeatherCard({ isLoading, day }) {
           </Styles.SubInfo>
           <Styles.SubInfo>
             <div>
-              <Styles.SubInfo>Wind Speed</Styles.SubInfo>
+              <Styles.SubInfoTwo>Wind Speed</Styles.SubInfoTwo>
               <Styles.SubData>{day.wind_speed.toFixed()}</Styles.SubData>
             </div>
             <div>
