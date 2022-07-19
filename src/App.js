@@ -41,7 +41,7 @@ function App() {
   }
 
   useEffect(() => {
-    setSelectedCity(cities2[0]);
+    setSelectedCity(cities2['']);
   }, []);
 
   useEffect(() => {
