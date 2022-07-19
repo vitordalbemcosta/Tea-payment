@@ -10,6 +10,7 @@ function getDateName(day) {
   });
 }
 
+
 function WeatherCard({ isLoading, day }) {
   return (
     <>
@@ -26,7 +27,7 @@ function WeatherCard({ isLoading, day }) {
         <Styles.Card>
           <Styles.Day>{getDateName(day.dt)}</Styles.Day>
           <Styles.Degrees>{Math.ceil(day.temp.min.toFixed())}°C</Styles.Degrees>
-          <Styles.Icon>{day.weather[0].description} icon</Styles.Icon>
+          <Styles.Icon>{day.weather[0].description}</Styles.Icon>
           <Styles.SubInfo>
             <div>
               <Styles.SubInfo>Low</Styles.SubInfo>
